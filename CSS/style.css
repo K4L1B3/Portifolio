@@ -19,13 +19,14 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+  --subtitle-color: rgb(112, 112, 112);
 
   --body-font: "Poppins", sans-serif;
 
   /* .5rem = 8px, 1rem =16px, 1.5rem = 24 px ... */
   --big-font-site: 2rem;
   --h1-font-size: 3rem;
-  --h2-font-size: 1.25rem;
+  --h2-font-size: 1.8rem;
   --h3-font-size: 1rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
@@ -364,13 +365,12 @@ header {
   background-color: hsl(0, 0%, 87%);
 }
 
-.download_a { 
+.download_a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   font-size: 1rem;
-  
 }
 
 .button_downloadCV:hover {
@@ -381,15 +381,12 @@ header {
   background-color: hsl(0, 0%, 55%);
 }
 
-.download_a:visited{
-  
+.download_a:visited {
   color: black;
   text-decoration: none;
 }
 
-
 .button_contactme {
-  
   font-family: var(--body-font);
   border: none;
   border-radius: 0.625rem;
@@ -406,9 +403,7 @@ header {
   font-size: 1rem;
   font-weight: var(--font-medium);
   color: var(--body-color);
-
 }
-
 
 .button_contactme:hover {
   background-color: hsl(264, 70%, 51%);
@@ -448,7 +443,7 @@ header {
 }
 
 .title_about_me {
-  font-size: 1.8rem;
+  font-size: var(--h2-font-size);
 }
 
 .subtitle_about_me {
@@ -513,7 +508,6 @@ header {
   font-size: 1.5rem;
 }
 
-
 /* SKILLS DROPDOWN */
 .skills-section {
   font-family: var(--body-font);
@@ -539,7 +533,7 @@ header {
 }
 
 .section_title {
-  font-size: 1.8rem;
+  font-size: var(--h2-font-size);
 }
 
 .section_subtitle {
@@ -558,7 +552,7 @@ header {
 }
 
 .skills_icon,
-.skills_arrow{
+.skills_arrow {
   font-size: 2rem;
   color: var(--first-color);
 }
@@ -579,7 +573,7 @@ header {
 
 .skills_arrow {
   margin-left: auto;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .skills_list {
@@ -589,9 +583,11 @@ header {
   display: none;
   opacity: 0;
   height: 0px;
-  
 }
 
+.skills_bar {
+  margin-bottom: 10%;
+}
 
 .skills_titles {
   display: flex;
@@ -611,18 +607,16 @@ header {
 .skills_bar,
 .skills_percentage {
   height: 5px;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .skills_bar {
   background-color: var(--first-color-lighter);
-
 }
 
 .skills_percentage {
   display: block;
   background-color: var(--first-color);
-
 }
 
 .skills_html {
@@ -650,12 +644,9 @@ header {
 .skills_close.skills_list {
   height: 0;
   animation: hightDropDown 2s forwards;
-
-
 }
 
 .skills_open.skills_list {
-
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -666,9 +657,8 @@ header {
   opacity: 1;
   height: 100%;
 
-  animation: hightUp .5s forwards;
+  animation: hightUp 0.5s forwards;
   margin-bottom: 10%;
-
 }
 
 .skills_open_header .skills_arrow {
@@ -676,10 +666,167 @@ header {
 }
 
 @keyframes hightUp {
-  from {height: 0;}
-  to {height: 100%;}
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 @keyframes hightDropDown {
-  from {height: 100%;}
-  to {height: 0;}
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
 }
+
+/* QUALIFICATION */
+.qualification_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: var(--body-font);
+}
+
+.qualification_title {
+  font-size: var(--h2-font-size);
+}
+
+.qualification_subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--subtitle-color);
+}
+
+/* EDUCATION LIST */
+
+.qualification_subHeader_education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.1rem;
+
+  color: var(--first-color);
+  font-family: var(--body-font);
+
+  margin-top: 10%;
+}
+
+.qualification_subHeader_education > i {
+  font-size: 2rem;
+  color: var(--first-color);
+ 
+}
+
+.qualification_education{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qualification_education_list {
+ 
+  font-family: var(--body-font);
+}
+
+.qualification_list_content { 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+  
+}
+
+.time_line_qualification,
+.time_line_body {
+  height: 5px;
+  width: 130px;
+  border-radius: 0.25rem;
+}
+
+.time_line_body {
+  display: block;
+  position: relative;
+  background-color: var(--first-color-lighter);
+  transform: rotate(90deg);
+  left: -90px;
+  bottom: -85px;
+}
+
+.time_line_qualification {
+  margin-bottom: 10%;
+}
+
+/* WORK LIST */
+
+.qualification_subHeader_work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.1rem;
+
+  color: var(--first-color);
+  font-family: var(--body-font);
+
+  margin-top: 10%;
+}
+
+.qualification_subHeader_work > i {
+  font-size: 2rem;
+  color: var(--first-color);
+ 
+}
+
+.qualification_work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qualification_work_list {
+ 
+  font-family: var(--body-font);
+}
+
+.qualification_list_content { 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 25px;
+  
+}
+
+.time_line_qualification,
+.time_line_body {
+  height: 5px;
+  width: 130px;
+  border-radius: 0.25rem;
+}
+
+.time_line_body {
+  display: block;
+  position: relative;
+  background-color: var(--first-color-lighter);
+  transform: rotate(90deg);
+  left: -90px;
+  bottom: -85px;
+}
+
+.time_line_qualification {
+  margin-bottom: 10%;
+}
+
+/* SERVICES */
+
+/* PROJECTS */
+
+/* CONTACT */
