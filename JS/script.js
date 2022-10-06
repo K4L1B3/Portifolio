@@ -44,6 +44,7 @@ function toogle(accordionId, headerClass, listClass) {
     const accordionHeader = accordionItem.getElementsByClassName(headerClass).item(0);
     console.log(accordionHeader)
     const skillArrows = document.getElementsByClassName('skills_arrow');
+    
 
     accordionHeader.addEventListener('click', () => {
         console.log(accordionList.classList)
@@ -92,6 +93,7 @@ function toogle(accordionId, headerClass, listClass) {
 
 
 toogle('skills2', 'skills_header', 'skills_list', 'skillArrows');
+
 
 
 
