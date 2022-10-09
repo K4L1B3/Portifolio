@@ -422,6 +422,11 @@ header {
 
 /* ABOUT ME */
 
+.aboutme-section {
+  margin-bottom: 30%;
+
+}
+
 .main_about_container {
   display: flex;
   justify-content: center;
@@ -456,7 +461,6 @@ header {
   flex-direction: column;
   gap: 1rem;
 
-  margin-bottom: 30%;
 }
 
 .image_about_me {
@@ -688,7 +692,7 @@ header {
 .qualification-section {
   font-family: var(--body-font);
 
-  margin-bottom: 30%;
+  margin-bottom: 20%;
 }
 
 .qualification_header {
@@ -709,7 +713,7 @@ header {
   font-size: 1.4rem;
   font-weight: var(--font-medium);
   cursor: pointer;
-  color:  var(--subtitle-color);
+  color: var(--subtitle-color);
 }
 
 .qualification_button:hover {
@@ -724,7 +728,7 @@ header {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
-} 
+}
 
 .qualification_title {
   font-size: var(--normal-font-size);
@@ -744,7 +748,7 @@ header {
   color: var(--subtitle-color);
 }
 
-.qualification_rounder{
+.qualification_rounder {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -764,7 +768,7 @@ header {
   display: none;
 }
 
-.qualification_active[data-content]{
+.qualification_active[data-content] {
   display: block;
 }
 
@@ -772,8 +776,11 @@ header {
   color: var(--first-color);
 }
 
-
 /* SERVICES */
+
+.services-section {
+  margin-bottom: 20%;
+}
 
 .services {
   font-family: var(--big-font-site);
@@ -801,10 +808,10 @@ header {
 .services_content {
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem .5rem 1.25rem 1.5rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 4px rgba(0,0,0, .15);
-  transition: .3s;
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
 }
 
 .services_content:hover {
@@ -818,7 +825,6 @@ header {
   margin-bottom: var(--mb-0-1);
 }
 
-
 .services_title {
   font-size: 1.3rem;
   margin-bottom: var(--mb-0-1);
@@ -830,11 +836,11 @@ header {
   justify-content: center;
   align-items: center;
   gap: 0.313rem;
-} 
+}
 
 .button--small {
-  padding: .75rem 1rem;
-} 
+  padding: 0.75rem 1rem;
+}
 
 .button--link {
   padding: 0;
@@ -848,12 +854,12 @@ header {
 }
 
 .services_button {
- cursor: pointer;
- font-size: var(--normal-font-size);
+  cursor: pointer;
+  font-size: var(--normal-font-size);
 }
 .services_button:hover > .button_icon {
-  transform: translateX(.25rem);
-  transition: .3s;
+  transform: translateX(0.25rem);
+  transition: 0.3s;
 }
 
 .services_modal {
@@ -862,7 +868,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -870,18 +876,18 @@ header {
   z-index: var(--z-modal);
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .services_modal-content {
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .services_modal-services {
-  row-gap:1rem;
+  row-gap: 1rem;
 }
 
 .services_modal-service {
@@ -895,13 +901,12 @@ header {
 }
 
 .services_modal-close {
-   position: absolute;
-   top: 1rem;
-   right: 1rem;
-   font-size: 1.5rem;
-   color: var(--first-color);
-   cursor: pointer;
-
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
 }
 
 .services_modal-icon {
@@ -913,8 +918,6 @@ header {
   opacity: 1;
   visibility: visible;
 }
-
-
 
 /* PROJECTS */
 
