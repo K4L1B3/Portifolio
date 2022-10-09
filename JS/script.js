@@ -44,7 +44,7 @@ function toogle(accordionId, headerClass, listClass) {
     const accordionHeader = accordionItem.getElementsByClassName(headerClass).item(0);
     console.log(accordionHeader)
     const skillArrows = document.getElementsByClassName('skills_arrow');
-    
+
 
     accordionHeader.addEventListener('click', () => {
         console.log(accordionList.classList)
@@ -110,7 +110,7 @@ tabs.forEach(tab => {
             tabContent.classList.remove('qualification_active');
         })
         target.classList.add('qualification_active')
-        
+
         tabs.forEach(tab => {
             tab.classList.remove('qualification_active');
         })
@@ -120,3 +120,27 @@ tabs.forEach(tab => {
 
 
 // SERVICES
+
+const modalViews = document.querySelectorAll('.services_modal'),
+    modalBtns = document.querySelectorAll('.services_button'),
+    modalCloses = document.querySelectorAll('.services_modal-close');
+
+
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalCloses, i) => {
+    modalCloses.addEventListener('click', () => {
+      
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal');
+        })
+    })
+})
