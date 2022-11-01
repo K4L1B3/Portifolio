@@ -34,9 +34,19 @@ function linkAction() {
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
-// ACCORDION SKILLS
+// Header shadow
+function scrollHeader() {
+    const nav = document.getElementById('header');
 
-// ACCORDION -> FRONTEND SKILLS
+    // quando o scroll estiver a 200 de altura da viewport, add scroll-header class
+    if (this.scrollY >= 80) nav.classList.add('scroll-header');
+    else nav.classList.remove('scroll-header');
+
+}
+
+window.addEventListener('scroll', scrollHeader);
+
+// ACCORDION SKILLS
 
 function toogle(accordionId, headerClass, listClass) {
     const accordionItem = document.getElementById(accordionId);
@@ -133,3 +143,34 @@ let swiper = new Swiper(".mySwiper", {
     },
 });
 
+
+// DARK LIGHT THEME
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'uil-sun';
+
+// Anteriormente selecionado (se o usuario selecionar)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// nos obtemos o tema atual que a interface irá validar a classe dark-theme
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+
+// nos validaremos se o usario anteriormente escolher o topico
+if (selectedTheme) {
+    // se a validação for cumprida, iremos perguntar qual issue devera ser ativada se é a activated ou desativated o the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // add ou remover the dark / icon theme
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+
+    // nos salvamos o tema e o icone atual para o usuario escolher
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+})
