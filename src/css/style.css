@@ -24,7 +24,7 @@
   --body-font: "Poppins", sans-serif;
 
   --big-font-sipx: 2rem;
-  --h1-font-size: 3rem;
+  --h1-font-size: 2.5rem;
   --h2-font-size: 1.8rem;
   --h3-font-size: 1rem;
   --normal-font-size: 0.938rem;
@@ -270,6 +270,7 @@ header {
   }
 }
 
+
 .nav_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -317,21 +318,28 @@ header {
 
 /* HOME */
 
-.presentation_image_social_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 3rem;
+.home_container {
+  gap: 1rem;
+}
 
-  margin-top: 25%;
+.home_content {
+  grid-template-columns: 0.5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
 }
 
 .social_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.home_data {
+  grid-column: 1/3;
+}
+
+.social_container {
+  margin-left: 50%;
   gap: 1.563rem;
 }
 
@@ -350,10 +358,8 @@ header {
 }
 
 .image_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 16rem;
+  margin-left: 10%;
+  width: 14rem;
 }
 
 .text_presentation {
@@ -396,7 +402,7 @@ header {
   border: none;
   border-radius: 0.625rem;
   background-color: none;
-  padding: 5%;
+  padding: 4%;
   font-weight: var(--font-medium);
   background-color: hsl(0, 0%, 87%);
 }
@@ -427,7 +433,7 @@ header {
   border: none;
   border-radius: 0.625rem;
   background-color: none;
-  padding: 5%;
+  padding: 4%;
   background-color: var(--first-color);
 }
 
@@ -1077,14 +1083,6 @@ footer {
   margin-top: 10%;
 }
 
-.info_details_footer > p {
-  /* font-size: 1.2rem; */
-}
-
-.info_details_footer > h3 {
-  /* font-size: var(--h3-font-size); */
-}
-
 .sections_details_footer {
   display: flex;
   justify-content: center;
@@ -1114,10 +1112,6 @@ footer {
 
 /* SCREEN 500PX */
 @media screen and (min-width: 500px) {
-  .presentation_image_social_container {
-    gap: 3rem;
-  }
-
   .home_icon {
     font-size: 2rem;
   }
@@ -1147,9 +1141,6 @@ footer {
 @media screen and (min-width: 600px) {
   body {
     min-width: 600px;
-  }
-  .presentation_image_social_container {
-    gap: 6rem;
   }
 
   .image_container {
@@ -1236,10 +1227,336 @@ footer {
   .portifolio_button {
     font-size: 1.3rem;
   }
+}
+
+@media screen and (min-width: 810px) {
+  .home_content {
+    margin-left: 3%;
+  }
+
+  .social_container {
+    margin-left: 60%;
+  }
+
+  .image_container {
+    margin-left: 20%;
+  }
+
+  .button_downloadCV {
+    padding: 3%;
+  }
+
+  .button_contactme {
+    padding: 3.3%;
+  }
+
+  .buttons_container {
+    margin-left: -12%;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 960px) {
+  .home_content {
+    grid-template-columns: max-content 1fr 1fr;
+    margin-left: 2%;
+    gap: 5rem;
+  }
+
+  .home_data {
+    grid-column: initial;
+  }
+
+  .image_container {
+    order: 1;
+    justify-content: center;
+    width: 19rem;
+    margin-left: -5%;
+  }
+
+  .social_container {
+    margin-top: 166%;
+  }
+
+  .home_icon {
+    font-size: 2rem;
+  }
+
+  .text_presentation {
+    padding-bottom: 20%;
+    width: 200%;
+  }
+
+  .paragraph_presentation_text {
+    width: 40%;
+  }
+
+  .buttons_container {
+    justify-content: flex-start;
+    margin-left: 10%;
+    gap: 1.5rem;
+  }
+
+  .button_downloadCV {
+    padding: 5%;
+    width: 12rem;
+    font-size: 0.9rem;
+  }
+
+  .button_downloadCV > i {
+    font-size: 1.3rem;
+  }
+
+  .button_contactme {
+    padding: 5%;
+    width: 11rem;
+    font-size: 0.9rem;
+    gap: 0.8rem;
+  }
+
+  .button_contactme > i {
+    font-size: 1.3rem;
+  }
+
+  .main_about_container {
+    margin-top: 26%;
+  }
+
+  .container_text_about_me {
+    gap: 3rem;
+  }
+
+  .image_about_me {
+    width: 50%;
+  }
+
+  .paragraph_description {
+    font-size: 1.2rem;
+    width: 70%;
+  }
+
+  .about_info-title {
+    font-size: 0.9rem;
+  }
+
+  .aboutme-section {
+    margin-bottom: 27%;
+  }
+
+  .skills-section {
+    margin-bottom: 22%;
+  }
+
+  .qualification_container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .services_container {
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .services_modal-content {
+    padding: 15%;
+    padding-bottom: 4%;
+  }
+
+  .services_modal-title {
+    margin-left: -35%;
+    margin-top: -40%;
+  }
+
+  .services_modal-service {
+    margin-left: -35%;
+    margin-top: 10%;
+  }
+
+  .services-section {
+    margin-bottom: 12%;
+  }
+
+  .portifolio_img {
+    width: 30rem;
+  }
+
+  .swiper-button-next {
+    left: 46rem !important;
+  }
+
+  .swiper-button-prev {
+    left: -2rem !important;
+  }
+
+  .swiper-portifolio-icon {
+    font-size: 7rem;
+  }
+
+  .footer_social_midia {
+    margin-top: -2%;
+  }
+
+  footer {
+    gap: 3rem;
+  }
+
+  .footer_social_midia {
+    margin-left: 5%;
+    gap: 1.7rem;
+  }
+
+  .footer_social_midia > a > i {
+    font-size: 1.5rem;
+  }
+
+  .button_contactme_footer {
+    padding: 2%;
+    width: 12rem;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 6rem 0 2rem;
+  }
+
+  .header {
+    top: 0;
+    bottom: initial;
+  }
+
+  .header,
+  .main,
+  .footer_container {
+    padding: 0 1rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height));
+  }
+
+  .nav_icon,
+  .nav_close,
+  .nav_toggle {
+    display: none;
+  }
+
+  .nav_list {
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  .nav_menu {
+    margin-left: auto;
+    
+  }
+
+  .nav_logo {
+    font-weight: 700;
+  }
+
+  .nav {
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+  
+  .change-theme {
+    margin: 0;
+  }
+
+  .home_container {
+    margin-top: 7%;
+  }
+
+  .home_container {
+    row-gap: 5rem;
+  }
+  
+  .home_content {
+    padding-top: 5.5rem;
+    column-gap: 2rem;    
+  }
+
+  .image_about_me {
+    width: 25rem;
+  }
 
 
 }
 
-/* DESKTOP */
-@media screen and (min-with: 960px) {
+@media screen and (min-width: 1920px) {
+  
+  .image_container {
+    width: 30rem;
+  }
+
+  .home_content  {
+    column-gap: 10rem;
+    margin-left: -20%;
+  }
+
+  .paragraph_description {
+    width: 40%;
+  }
+
+  .title_about_me_container {
+    margin-bottom: 4%;
+  }
+  
+  .section_title_skills {
+    margin-bottom: 7%;
+  }
+
+  .aboutme-section {
+    margin-bottom: 14%;
+  }
+  
+  .skills-section {
+    margin-bottom: 14%;
+  }
+
+  .qualification_header {
+    margin-bottom: 7%;
+  }
+
+  .qualification-section {
+    margin-bottom: 10%;
+  }
+
+  .services_header {
+    margin-bottom: 10%;
+  }
+
+  .services_modal-content {
+    padding: 10%;
+    padding-top: 8%;
+    padding-bottom: 3%;
+  }
+
+  .services-section {
+    margin-bottom: 10%;
+  }
+
+  .button_contactme_footer {
+    padding: 1.3%;
+    width: 16rem;
+    margin-bottom: 10%;
+  }
+
+  .info_details_footer {
+    margin-top: 2%;
+  }
+
+  .footer_social_midia {
+    margin-bottom: 2%;
+  }
+
 }
