@@ -413,14 +413,17 @@ header {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .button_downloadCV:hover {
   background-color: hsl(0, 0%, 68%);
+  text-decoration: none;
 }
 
 .button_downloadCV:active {
   background-color: hsl(0, 0%, 55%);
+  text-decoration: none;
 }
 
 .download_a:visited {
