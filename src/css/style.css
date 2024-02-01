@@ -413,6 +413,7 @@ header {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
+  color:rgb(0, 0, 0);
 }
 
 .button_downloadCV:hover {
@@ -421,6 +422,7 @@ header {
 
 .button_downloadCV:active {
   background-color: hsl(0, 0%, 55%);
+  color: white;
 }
 
 .download_a:visited {
@@ -691,6 +693,19 @@ header {
 .skills_spring {
   width: 70%;
 }
+
+.skills_NextJS {
+  width: 70%;
+}
+
+.skills_dotnet {
+  width: 57%;
+}
+
+.skills_cSharp {
+  width:65%;
+}
+
 
 .skills_close.skills_list {
   height: 0;
