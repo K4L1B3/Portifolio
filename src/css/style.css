@@ -418,6 +418,7 @@ header {
 
 .button_downloadCV:hover {
   background-color: hsl(0, 0%, 68%);
+  text-decoration: none;
 }
 
 .button_downloadCV:active {
